@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:func_widgets/func_widgets.dart';
+import 'package:func_widgets/fw_text_field.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,7 +55,13 @@ class _MyAppState extends State<MyApp> {
           title: const Text('func_widgets'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Padding(
+            padding: EdgeInsets.all(20),
+            child: FWTextField(
+              labelText: "Value",
+              hintText: "Value",
+            ),
+          ),
         ),
       ),
     );
